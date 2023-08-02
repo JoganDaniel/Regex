@@ -3,11 +3,13 @@ namespace RegexOperations
 {
     public class Program
     {
-        static string email = "jojojo";
+        static string email1 = "abc";
+        static string email2 = "@bridgelabz";
+
         private static void Main(string[] args)
         {
             ValidateEmail validateEmail = new ValidateEmail();
-            validateEmail.uc1Validate(email);
+            validateEmail.uc2Validate(email);
             
         }
     }

@@ -12,7 +12,7 @@ namespace RegexOperations
 
         string uc1Regex = "^[a-z]{0,}$";
         string uc2Regex = "^[@]{1}[a-z]$";
-        string uc3Regex = "^[.]{1}[a-z]{2}&";
+        string uc3Regex = "^[.]{1}[a-z]{2,3}$";
         string uc4Regex = "^[a-z]+[._+-]{0,1}[a-z]&";
         string actualRegex = "^[a-z]+([._+-]{0,1}[a-z]+[@]";
         public void uc1Validate(string input)
