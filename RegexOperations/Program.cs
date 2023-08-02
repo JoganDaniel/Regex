@@ -8,6 +8,7 @@ namespace RegexOperations
     {
         static string firstName = "Aweff";
         static string lastName = "Wfdfw";
+        static string email = "j@d.com";
         private static void Main(string[] args)
         {
             UserRegistration validate = new UserRegistration();
@@ -15,6 +16,8 @@ namespace RegexOperations
             validate.ValidateName(firstName);
             Console.WriteLine(lastName);
             validate.ValidateName(lastName);
+            Console.WriteLine(email);
+            validate.ValidateEmail(email);
         }
     }
 }
