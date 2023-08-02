@@ -11,6 +11,7 @@ namespace RegexOperations
             validatePincode.uc2Validate(pincode);
             validatePincode.uc3Validate(pincode);
             validatePincode.uc4Validate(pincode);
+
         }
     }
 }

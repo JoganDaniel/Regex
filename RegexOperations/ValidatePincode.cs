@@ -36,6 +36,7 @@ namespace RegexOperations
             else
                 Console.WriteLine("! inValid");
         }
+
         public void uc4Validate(string input)
         {
             bool result = Regex.IsMatch(input, uc4_Regex);

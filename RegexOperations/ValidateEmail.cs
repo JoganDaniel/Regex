@@ -9,6 +9,7 @@ namespace RegexOperations
 {
     public class ValidateEmail
     {
+
         string uc1Regex = "^[a-z]{0,}$";
         string uc2Regex = "^[@]{1}[a-z]$";
         string uc3Regex = "^[.]{1}[a-z]{2}&";
