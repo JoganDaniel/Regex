@@ -39,7 +39,7 @@ namespace RegexOperations
             else
                 Console.WriteLine("! inValid");
         }
-        public void uc14alidate(string input)
+        public void uc4Validate(string input)
         {
             bool result = Regex.IsMatch(input, uc4Regex);
             if (result)
