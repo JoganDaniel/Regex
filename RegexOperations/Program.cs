@@ -7,7 +7,7 @@ namespace RegexOperations
         static string email2 = "@bridgelabz";
         static string email3 = ".com";
         static string email4 = "abc.hh@bridgelabz.com";
-        static string email5 = "abc.hh@bridgelabz.com";
+        static string email5 = "abc.de@bridgelabz.co.in";
 
 
         private static void Main(string[] args)
@@ -17,7 +17,7 @@ namespace RegexOperations
             validateEmail.uc2Validate(email2);
             validateEmail.uc3Validate(email3);
             validateEmail.uc4Validate(email4);
-
+            validateEmail.uc5Validate(email5);
         }
     }
 }

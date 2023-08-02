@@ -14,7 +14,7 @@ namespace RegexOperations
         string uc2Regex = "^[@]{1}[a-z]{1,}$";
         string uc3Regex = "^[.]{1}[a-z]{2,3}$";
         string uc4Regex = "^[a-z]+[._+-]{0,1}[a-z]{0,}[@]{1}[a-z]{1,}[.]{1}[a-z]{2,}$";
-        string actualRegex = "^[a-z]+[._+-]{0,1}[a-z]{1,}[@]{1}[a-z]{1,}[.]{1}[a-z]{2,3}+[.]{0,1}+[a-z]{0,2}$";
+        string actualRegex = "^[a-z]{1,}[._+-]{0,1}[a-z]{1,}[@]{1}[a-z]{1,}[.]{1}[a-z]{2,3}[.]{0,1}[a-z]{0,2}$";
         public void uc1Validate(string input)
         {
             bool result = Regex.IsMatch(input, uc1Regex);
@@ -47,6 +47,13 @@ namespace RegexOperations
             else
                 Console.WriteLine("! inValid");
         }
-
+        public void uc5Validate(string input)
+        {
+            bool result = Regex.IsMatch(input, actualRegex);
+            if (result)
+                Console.WriteLine("Valid");
+            else
+                Console.WriteLine("! inValid");
+        }
     }
 }
