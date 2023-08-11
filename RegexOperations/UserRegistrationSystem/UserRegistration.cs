@@ -66,6 +66,9 @@ namespace RegexOperations.UserRegistrationSystem
                 //return false;
             }
         }
-        //public bool ValidatePasswordRegex(string input)=> Regex.IsMatch(input, passwordRegex) ? true: false;
+        public bool ValidateNameRegex(string input) => Regex.IsMatch(input, nameRegex) ? true : false;
+        public bool ValidateEmailRegex(string input) => Regex.IsMatch(input, emailRegex) ? true : false;
+        public bool ValidateMobileRegex(string input) => Regex.IsMatch(input, mobileRegex) ? true : false;
+        public bool ValidatePasswordRegex(string input) => Regex.IsMatch(input, passwordRegex) ? true : false;
     }
 }
