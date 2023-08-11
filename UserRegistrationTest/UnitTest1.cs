@@ -14,8 +14,13 @@ namespace UserRegistrationTest
             UserRegistration userReg = new UserRegistration();
             bool valid = userReg.ValidateName("Name");
             Assert.IsTrue(valid);
-            bool invalid = userReg.ValidateName("yuvuy878");
-            Assert.IsFalse(invalid);
+            try
+            {
+                bool invalid = userReg.ValidateName("yuvuy878");
+            }
+            catch(UserRegistrationException ex) {
+                Assert.IsFalse(ex.valid);
+            }
         }
         [Test]
         public void TestLastName()
@@ -23,8 +28,14 @@ namespace UserRegistrationTest
             UserRegistration userReg = new UserRegistration();
             bool valid = userReg.ValidateName("Name");
             Assert.IsTrue(valid);
-            bool invalid = userReg.ValidateName("yuvuy878");
-            Assert.IsFalse(invalid);
+            try
+            {
+                bool invalid = userReg.ValidateName("yuvuy878");
+            }
+            catch (UserRegistrationException ex)
+            {
+                Assert.IsFalse(ex.valid);
+            }
         }
         [Test]
         public void TestMobile()
@@ -32,8 +43,14 @@ namespace UserRegistrationTest
             UserRegistration userReg = new UserRegistration();
             bool valid = userReg.ValidateMobile("91 8789653465");
             Assert.IsTrue(valid);
-            bool invalid = userReg.ValidateMobile("76 876877");
-            Assert.IsFalse(invalid);
+            try
+            {
+                bool invalid = userReg.ValidateMobile("76 876877");
+            }
+            catch (UserRegistrationException ex)
+            {
+                Assert.IsFalse(ex.valid);
+            }
         }
         [Test]
         public void TestEmail()
@@ -41,8 +58,14 @@ namespace UserRegistrationTest
             UserRegistration userReg = new UserRegistration();
             bool valid = userReg.ValidateEmail("abc.uh@huasd.com.in");
             Assert.IsTrue(valid);
-            bool invalid = userReg.ValidateEmail("abc@.uyagd.col");
-            Assert.IsFalse(invalid);
+            try
+            {
+                bool invalid = userReg.ValidateEmail("abc@.uyagd.col");
+            }
+            catch (UserRegistrationException ex)
+            {
+                Assert.IsFalse(ex.valid);
+            }
         }
         [Test]
         public void TestPassword()
@@ -50,8 +73,15 @@ namespace UserRegistrationTest
             UserRegistration userReg = new UserRegistration();
             bool valid = userReg.ValidatePassword("vvdcA876@fsd");
             Assert.IsTrue(valid);
-            bool invalid = userReg.ValidatePassword("vuvcuy0SDc");
-            Assert.IsFalse(invalid);
+            try
+            {
+                bool invalid = userReg.ValidatePassword("vuvcuy0SDc");
+
+            }
+            catch (UserRegistrationException ex)
+            {
+                Assert.IsFalse(ex.valid);
+            }
         }
         [Test]
         public void TestSampleEmails()

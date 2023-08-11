@@ -19,8 +19,9 @@ namespace RegexOperations.UserRegistrationSystem
             }
             else
             {
-                Console.WriteLine("Not valid");
-                return false;
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.INVALID, false);
+                //Console.WriteLine("Not valid");
+                //return false;
             }
         }
         public bool ValidateEmail(string mail)
@@ -32,8 +33,9 @@ namespace RegexOperations.UserRegistrationSystem
             }
             else
             {
-                Console.WriteLine("Not valid");
-                return false;
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.INVALID, false);
+                //Console.WriteLine("Not valid");
+                //return false;
             }
         }
         public bool ValidateMobile(string number)
@@ -45,8 +47,9 @@ namespace RegexOperations.UserRegistrationSystem
             }
             else
             {
-                Console.WriteLine("Not valid");
-                return false;
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.INVALID, false);
+                //Console.WriteLine("Not valid");
+                //return false;
             }
         }
         public bool ValidatePassword(string pass)
@@ -58,8 +61,9 @@ namespace RegexOperations.UserRegistrationSystem
             }
             else
             {
-                Console.WriteLine("Not valid");
-                return false;
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.INVALID, false);
+                //Console.WriteLine("Not valid");
+                //return false;
             }
         }
         //public bool ValidatePasswordRegex(string input)=> Regex.IsMatch(input, passwordRegex) ? true: false;
