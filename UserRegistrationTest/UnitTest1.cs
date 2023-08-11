@@ -5,6 +5,8 @@ namespace UserRegistrationTest
 {
     public class Tests
     {
+        static string[] emails = { "abc@yahoo.com", "abc-100@yahoo.com", "abc.100@yahoo.com", "abc111@abc.com", "abc-100@abc.net", "abc.100@abc.com.au", "abc@1.com", "abc@gmail.com.com", "abc+100@gmail.com" };
+
 
         [Test]
         public void TestFirstName()
@@ -50,6 +52,16 @@ namespace UserRegistrationTest
             Assert.IsTrue(valid);
             bool invalid = userReg.ValidatePassword("vuvcuy0SDc");
             Assert.IsFalse(invalid);
+        }
+        [Test]
+        public void TestSampleEmails()
+        {
+            UserRegistration userReg = new UserRegistration();
+            foreach (string s in emails)
+            {
+                bool valid = userReg.ValidateEmail(s);
+                Assert.IsTrue(valid);
+            }
         }
     }
 }
