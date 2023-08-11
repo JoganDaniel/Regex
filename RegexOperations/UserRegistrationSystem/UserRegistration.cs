@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using System.Text.RegularExpressions;
 
 namespace RegexOperations.UserRegistrationSystem
 {
@@ -67,5 +62,6 @@ namespace RegexOperations.UserRegistrationSystem
                 return false;
             }
         }
+        //public bool ValidatePasswordRegex(string input)=> Regex.IsMatch(input, passwordRegex) ? true: false;
     }
 }
